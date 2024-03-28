@@ -4,6 +4,7 @@ import { useState } from "react";
 import { DragEvent } from "react";
 
 export default function Home() {
+  const [randomCards, setRandomCards] = useState<string[]>(['1e', '2e', '3e', '4e'])
   const [order1, setOrder1] = useState<string[]>([])
   const [order2, setOrder2] = useState<string[]>([])
   const [order3, setOrder3] = useState<string[]>([])
@@ -17,21 +18,29 @@ export default function Home() {
   const handleOnDrop1 = (e: React.DragEvent) => {
     const carta = e.dataTransfer.getData("carta")
     setOrder1([...order1, carta])
+    const newCartas = randomCards.filter(c => c !== carta)
+    setRandomCards(newCartas)
   }
 
   const handleOnDrop2 = (e: React.DragEvent) => {
     const carta = e.dataTransfer.getData("carta")
     setOrder2([...order2, carta])
+    const newCartas = randomCards.filter(c => c !== carta)
+    setRandomCards(newCartas)
   }
 
   const handleOnDrop3 = (e: React.DragEvent) => {
     const carta = e.dataTransfer.getData("carta")
     setOrder3([...order3, carta])
+    const newCartas = randomCards.filter(c => c !== carta)
+    setRandomCards(newCartas)
   }
 
   const handleOnDrop4 = (e: React.DragEvent) => {
     const carta = e.dataTransfer.getData("carta")
     setOrder4([...order4, carta])
+    const newCartas = randomCards.filter(c => c !== carta)
+    setRandomCards(newCartas)
   }
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -79,10 +88,11 @@ export default function Home() {
 
       </section>
       <div className="flex gap-16 select-none">
-        <img draggable onDragStart={(e) => handleOnDrag(e, "1e")} src="/1e.png" />
-        <img draggable onDragStart={(e) => handleOnDrag(e, "2e")} src="/2e.png" />
-        <img draggable onDragStart={(e) => handleOnDrag(e, "3e")} src="/3e.png" />
-        <img draggable onDragStart={(e) => handleOnDrag(e, "4e")} src="/4e.png" />
+        {
+          randomCards.map(card =>
+            <img draggable onDragStart={(e) => handleOnDrag(e, card)} src={card + '.png'} />
+          )
+        }
       </div>
     </main>
   );
