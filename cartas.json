@@ -1,0 +1,242 @@
+[
+  {
+    "id": "1c",
+    "name": "1 de Copas",
+    "img": "1c.png",
+    "value": 10
+  },
+  {
+    "id": "2c",
+    "name": "2 de Copas",
+    "img": "2c.png",
+    "value": 9
+  },
+  {
+    "id": "3c",
+    "name": "3 de Copas",
+    "img": "3c.png",
+    "value": 8
+  },
+  {
+    "id": "4c",
+    "name": "4 de Copas",
+    "img": "4c.png",
+    "value": 1
+  },
+  {
+    "id": "5c",
+    "name": "5 de Copas",
+    "img": "5c.png",
+    "value": 2
+  },
+  {
+    "id": "6c",
+    "name": "6 de Copas",
+    "img": "6c.png",
+    "value": 3
+  },
+  {
+    "id": "7c",
+    "name": "7 de Copas",
+    "img": "7c.png",
+    "value": 4
+  },
+  {
+    "id": "10c",
+    "name": "Rey de Copas",
+    "img": "10c.png",
+    "value": 5
+  },
+  {
+    "id": "11c",
+    "name": "11 de Copas",
+    "img": "11c.png",
+    "value": 6
+  },
+  {
+    "id": "12c",
+    "name": "12 de Copas",
+    "img": "12c.png",
+    "value": 7
+  },
+  {
+    "id": "1e",
+    "name": "1 de Espadas",
+    "img": "1e.png",
+    "value": 14
+  },
+  {
+    "id": "2e",
+    "name": "2 de Espadas",
+    "img": "2e.png",
+    "value": 9
+  },
+  {
+    "id": "3e",
+    "name": "3 de Espadas",
+    "img": "3e.png",
+    "value": 8
+  },
+  {
+    "id": "4e",
+    "name": "4 de Espadas",
+    "img": "4e.png",
+    "value": 1
+  },
+  {
+    "id": "5e",
+    "name": "5 de Espadas",
+    "img": "5e.png",
+    "value": 2
+  },
+  {
+    "id": "6e",
+    "name": "6 de Espadas",
+    "img": "6e.png",
+    "value": 3
+  },
+  {
+    "id": "7e",
+    "name": "7 de Espadas",
+    "img": "7e.png",
+    "value": 12
+  },
+  {
+    "id": "10e",
+    "name": "Rey de Espadas",
+    "img": "10e.png",
+    "value": 5
+  },
+  {
+    "id": "11e",
+    "name": "11 de Espadas",
+    "img": "11e.png",
+    "value": 6
+  },
+  {
+    "id": "12e",
+    "name": "12 de Espadas",
+    "img": "12e.png",
+    "value": 7
+  },
+  {
+    "id": "1b",
+    "name": "1 de Bastos",
+    "img": "1b.png",
+    "value": 13
+  },
+  {
+    "id": "2b",
+    "name": "2 de Bastos",
+    "img": "2b.png",
+    "value": 9
+  },
+  {
+    "id": "3b",
+    "name": "3 de Bastos",
+    "img": "3b.png",
+    "value": 8
+  },
+  {
+    "id": "4b",
+    "name": "4 de Bastos",
+    "img": "4b.png",
+    "value": 1
+  },
+  {
+    "id": "5b",
+    "name": "5 de Bastos",
+    "img": "5b.png",
+    "value": 2
+  },
+  {
+    "id": "6b",
+    "name": "6 de Bastos",
+    "img": "6b.png",
+    "value": 3
+  },
+  {
+    "id": "7b",
+    "name": "7 de Bastos",
+    "img": "7b.png",
+    "value": 4
+  },
+  {
+    "id": "10b",
+    "name": "Rey de Bastos",
+    "img": "10b.png",
+    "value": 5
+  },
+  {
+    "id": "11b",
+    "name": "11 de Bastos",
+    "img": "11b.png",
+    "value": 6
+  },
+  {
+    "id": "12b",
+    "name": "12 de Bastos",
+    "img": "12b.png",
+    "value": 7
+  },
+  {
+    "id": "1o",
+    "name": "1 de Oros",
+    "img": "1o.png",
+    "value": 10
+  },
+  {
+    "id": "2o",
+    "name": "2 de Oros",
+    "img": "2o.png",
+    "value": 9
+  },
+  {
+    "id": "3o",
+    "name": "3 de Oros",
+    "img": "3o.png",
+    "value": 8
+  },
+  {
+    "id": "4o",
+    "name": "4 de Oros",
+    "img": "4o.png",
+    "value": 1
+  },
+  {
+    "id": "5o",
+    "name": "5 de Oros",
+    "img": "5o.png",
+    "value": 2
+  },
+  {
+    "id": "6o",
+    "name": "6 de Oros",
+    "img": "6o.png",
+    "value": 3
+  },
+  {
+    "id": "7o",
+    "name": "7 de Oros",
+    "img": "7o.png",
+    "value": 11
+  },
+  {
+    "id": "10o",
+    "name": "Rey de Oros",
+    "img": "10o.png",
+    "value": 5
+  },
+  {
+    "id": "11o",
+    "name": "11 de Oros",
+    "img": "11o.png",
+    "value": 6
+  },
+  {
+    "id": "12o",
+    "name": "12 de Oros",
+    "img": "12o.png",
+    "value": 7
+  }
+]
