@@ -16,35 +16,45 @@ export default function Home() {
   }
 
   const handleOnDrop1 = (e: React.DragEvent) => {
-    const carta = e.dataTransfer.getData("carta")
-    setOrder1([...order1, carta])
-    const newCartas = randomCards.filter(c => c !== carta)
-    setRandomCards(newCartas)
+    const card = e.dataTransfer.getData("carta")
+    setOrder1([...order1, card])
+    const newCards = randomCards.filter(c => c !== card)
+    setRandomCards(newCards)
   }
 
   const handleOnDrop2 = (e: React.DragEvent) => {
-    const carta = e.dataTransfer.getData("carta")
-    setOrder2([...order2, carta])
-    const newCartas = randomCards.filter(c => c !== carta)
-    setRandomCards(newCartas)
+    const card = e.dataTransfer.getData("carta")
+    setOrder2([...order2, card])
+    const newCards = randomCards.filter(c => c !== card)
+    setRandomCards(newCards)
   }
 
   const handleOnDrop3 = (e: React.DragEvent) => {
-    const carta = e.dataTransfer.getData("carta")
-    setOrder3([...order3, carta])
-    const newCartas = randomCards.filter(c => c !== carta)
-    setRandomCards(newCartas)
+    const card = e.dataTransfer.getData("carta")
+    setOrder3([...order3, card])
+    const newCards = randomCards.filter(c => c !== card)
+    setRandomCards(newCards)
   }
 
   const handleOnDrop4 = (e: React.DragEvent) => {
-    const carta = e.dataTransfer.getData("carta")
-    setOrder4([...order4, carta])
-    const newCartas = randomCards.filter(c => c !== carta)
-    setRandomCards(newCartas)
+    const card = e.dataTransfer.getData("carta")
+    setOrder4([...order4, card])
+    const newCards = randomCards.filter(c => c !== card)
+    setRandomCards(newCards)
   }
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault()
+  }
+
+  const cancelDrop = (card: string, order: number) => {
+    const newCards = [...randomCards, card]
+    setRandomCards(newCards)
+    order === 1 && setOrder1([])
+    order === 2 && setOrder2([])
+    order === 3 && setOrder3([])
+    order === 4 && setOrder4([])
+
   }
 
   return (
@@ -60,28 +70,40 @@ export default function Home() {
         <article draggable={false} onDrop={handleOnDrop1} onDragOver={handleDragOver} className="bg-red-400 w-60">
           {
             order1.map((card, index) => (
-              <img key={index} src={`/${card}.png`} />
+              <>
+                <img key={index} src={`/${card}.png`} />
+                <button type="button" onClick={() => cancelDrop(card, 1)}>X</button>
+              </>
             ))
           }
         </article>
         <article onDrop={handleOnDrop2} onDragOver={handleDragOver} className="bg-amber-400 w-60">
           {
             order2.map((card, index) => (
-              <img key={index} src={`/${card}.png`} />
+              <>
+                <img key={index} src={`/${card}.png`} />
+                <button type="button" onClick={() => cancelDrop(card, 2)}>X</button>
+              </>
             ))
           }
         </article>
         <article onDrop={handleOnDrop3} onDragOver={handleDragOver} className="bg-blue-400 w-60">
           {
             order3.map((card, index) => (
-              <img key={index} src={`/${card}.png`} />
+              <>
+                <img key={index} src={`/${card}.png`} />
+                <button type="button" onClick={() => cancelDrop(card, 3)}>X</button>
+              </>
             ))
           }
         </article>
         <article onDrop={handleOnDrop4} onDragOver={handleDragOver} className="bg-slate-400 w-60">
           {
             order4.map((card, index) => (
-              <img key={index} src={`/${card}.png`} />
+              <>
+                <img key={index} src={`/${card}.png`} />
+                <button type="button" onClick={() => cancelDrop(card, 4)}>X</button>
+              </>
             ))
           }
         </article>
