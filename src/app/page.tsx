@@ -59,49 +59,49 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col justify-between items-center p-24" >
-      <div>
+      {/*       <div>
         <h1>Truco Games</h1>
         <p>Ordena las cartas según su valor</p>
         <p>Si hay dos del mismo valor, van en la misma línea</p>
         <p>Si sobran líneas deben quedar libres las de menor valor</p>
         <button>Barajar</button>
-      </div>
+      </div> */}
       <section className="flex gap-4 w-screen justify-center h-80 bg-neutral-800">
-        <article draggable={false} onDrop={handleOnDrop1} onDragOver={handleDragOver} className="bg-red-400 w-60">
+        <article draggable={false} onDrop={handleOnDrop1} onDragOver={handleDragOver} className="bg-red-400 w-60 select-none">
           {
             order1.map((card, index) => (
               <>
-                <img key={index} src={`/${card}.png`} />
+                <img draggable={false} key={index} src={`/${card}.png`} />
                 <button type="button" onClick={() => cancelDrop(card, 1)}>X</button>
               </>
             ))
           }
         </article>
-        <article onDrop={handleOnDrop2} onDragOver={handleDragOver} className="bg-amber-400 w-60">
+        <article draggable={false} onDrop={handleOnDrop2} onDragOver={handleDragOver} className="bg-amber-400 w-60 select-none">
           {
             order2.map((card, index) => (
               <>
-                <img key={index} src={`/${card}.png`} />
+                <img draggable={false} key={index} src={`/${card}.png`} />
                 <button type="button" onClick={() => cancelDrop(card, 2)}>X</button>
               </>
             ))
           }
         </article>
-        <article onDrop={handleOnDrop3} onDragOver={handleDragOver} className="bg-blue-400 w-60">
+        <article draggable={false} onDrop={handleOnDrop3} onDragOver={handleDragOver} className="bg-blue-400 w-60 select-none">
           {
             order3.map((card, index) => (
               <>
-                <img key={index} src={`/${card}.png`} />
+                <img draggable={false} key={index} src={`/${card}.png`} />
                 <button type="button" onClick={() => cancelDrop(card, 3)}>X</button>
               </>
             ))
           }
         </article>
-        <article onDrop={handleOnDrop4} onDragOver={handleDragOver} className="bg-slate-400 w-60">
+        <article draggable={false} onDrop={handleOnDrop4} onDragOver={handleDragOver} className="bg-slate-400 w-60 select-none">
           {
             order4.map((card, index) => (
               <>
-                <img key={index} src={`/${card}.png`} />
+                <img draggable={false} key={index} src={`/${card}.png`} />
                 <button type="button" onClick={() => cancelDrop(card, 4)}>X</button>
               </>
             ))
