@@ -1,5 +1,6 @@
 'use client'
 
+import Card from "./components/Card";
 import useDraggableCards from "./hooks/useDraggableCards";
 
 export default function Home() {
@@ -31,48 +32,41 @@ export default function Home() {
       <div className="flex gap-16 select-none">
         {
           randomCards.map(card =>
-            <img draggable onDragStart={(e) => handleOnDrag(e, card)} src={card + '.png'} className="cursor-pointer h-36" />
+            <img
+              draggable
+              onDragStart={(e) => handleOnDrag(e, card)}
+              src={card + '.png'}
+              className="cursor-pointer h-36"
+            />
           )
         }
       </div>
       <section className="flex flex-col w-[60rem] justify-center gap-1">
-        <article draggable={false} onDrop={handleOnDrop1} onDragOver={handleDragOver} className="flex justify-center items-center bg-neutral-900 h-40 select-none rounded-lg">
+        <article draggable={false} onDrop={handleOnDrop1} onDragOver={handleDragOver} className="flex justify-center items-center gap-4 bg-neutral-900 h-40 select-none rounded-lg">
           {
             order1.map((card, index) => (
-              <>
-                <img draggable={false} key={index} src={`/${card}.png`} className="h-36" />
-                <button type="button" onClick={() => cancelDrop(card, 1)}>X</button>
-              </>
+              <Card card={card} key={index} order={1} cancelDrop={cancelDrop} />
             ))
           }
         </article>
-        <article draggable={false} onDrop={handleOnDrop2} onDragOver={handleDragOver} className="flex justify-center items-center bg-neutral-900 h-40 select-none rounded-lg">
+        <article draggable={false} onDrop={handleOnDrop2} onDragOver={handleDragOver} className="flex justify-center items-center gap-4 bg-neutral-900 h-40 select-none rounded-lg">
           {
             order2.map((card, index) => (
-              <>
-                <img draggable={false} key={index} src={`/${card}.png`} className="h-36" />
-                <button type="button" onClick={() => cancelDrop(card, 2)}>X</button>
-              </>
+              <Card card={card} key={index} order={2} cancelDrop={cancelDrop} />
             ))
           }
         </article>
-        <article draggable={false} onDrop={handleOnDrop3} onDragOver={handleDragOver} className="flex justify-center items-center bg-neutral-900 h-40 select-none rounded-lg">
+        <article draggable={false} onDrop={handleOnDrop3} onDragOver={handleDragOver} className="flex justify-center items-center gap-4 bg-neutral-900 h-40 select-none rounded-lg">
           {
             order3.map((card, index) => (
-              <>
-                <img draggable={false} key={index} src={`/${card}.png`} className="h-36" />
-                <button type="button" onClick={() => cancelDrop(card, 3)}>X</button>
-              </>
+              <Card card={card} key={index} order={3} cancelDrop={cancelDrop} />
             ))
           }
         </article>
-        <article draggable={false} onDrop={handleOnDrop4} onDragOver={handleDragOver} className="flex justify-center items-center bg-neutral-900 h-40 select-none rounded-lg">
+        <article draggable={false} onDrop={handleOnDrop4} onDragOver={handleDragOver} className="flex justify-center items-center gap-4 bg-neutral-900 h-40 select-none rounded-lg">
           {
             order4.map((card, index) => (
-              <>
-                <img draggable={false} key={index} src={`/${card}.png`} className="h-36" />
-                <button type="button" onClick={() => cancelDrop(card, 4)}>X</button>
-              </>
+              <Card card={card} key={index} order={4} cancelDrop={cancelDrop} />
             ))
           }
         </article>
