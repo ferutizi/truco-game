@@ -50,11 +50,22 @@ export default function Home() {
   const cancelDrop = (card: string, order: number) => {
     const newCards = [...randomCards, card]
     setRandomCards(newCards)
-    order === 1 && setOrder1([])
-    order === 2 && setOrder2([])
-    order === 3 && setOrder3([])
-    order === 4 && setOrder4([])
-
+    if (order === 1) {
+      const newOrder1 = order1.filter(c => c !== card)
+      order === 1 && setOrder1(newOrder1)
+    }
+    if (order === 2) {
+      const newOrder1 = order1.filter(c => c !== card)
+      order === 2 && setOrder2(newOrder1)
+    }
+    if (order === 3) {
+      const newOrder1 = order1.filter(c => c !== card)
+      order === 3 && setOrder3(newOrder1)
+    }
+    if (order === 4) {
+      const newOrder1 = order1.filter(c => c !== card)
+      order === 4 && setOrder4(newOrder1)
+    }
   }
 
   return (
@@ -112,7 +123,7 @@ export default function Home() {
       <div className="flex gap-16 select-none">
         {
           randomCards.map(card =>
-            <img draggable onDragStart={(e) => handleOnDrag(e, card)} src={card + '.png'} />
+            <img draggable onDragStart={(e) => handleOnDrag(e, card)} src={card + '.png'} className="cursor-pointer" />
           )
         }
       </div>
