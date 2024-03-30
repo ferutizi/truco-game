@@ -1,14 +1,31 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { DragEvent } from "react";
+import Cartas from '../../../cartas.json'
 
 export default function useDraggableCards() {
+
+  useEffect(() => {
+    generateRandomCards()
+  }, [])
+
+
   const [randomCards, setRandomCards] = useState<string[]>(['1e', '2e', '3e', '4e'])
   const [order1, setOrder1] = useState<string[]>([])
   const [order2, setOrder2] = useState<string[]>([])
   const [order3, setOrder3] = useState<string[]>([])
   const [order4, setOrder4] = useState<string[]>([])
+
+  const generateRandomCards = () => {
+    const randomSet = new Set()
+    while (randomSet.size < 4) {
+      const randomNumber = Math.floor(Math.random() * 40)
+      randomSet.add(Cartas[randomNumber])
+    }
+    const randomArray = Array.from(randomSet)
+    setRandomCards(randomArray)
+  }
 
   const handleOnDrag = (e: DragEvent<HTMLImageElement>, carta: string) => {
     console.log('dragStart')
