@@ -34,8 +34,10 @@ export default function Home() {
           randomCards.map(card =>
             <img
               draggable
+              alt={card.name}
+              title={card.name}
               onDragStart={(e) => handleOnDrag(e, card)}
-              src={card + '.png'}
+              src={card.img}
               className="cursor-pointer h-36"
             />
           )
@@ -70,7 +72,6 @@ export default function Home() {
             ))
           }
         </article>
-
       </section>
     </main>
   );

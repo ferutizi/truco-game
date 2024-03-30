@@ -1,16 +1,18 @@
 'use client'
 
+import { CardType } from "../hooks/useDraggableCards"
+
 interface CardProps {
-  card: string,
+  card: CardType,
   key: number,
   order: number,
-  cancelDrop: (card: string, order: number) => void,
+  cancelDrop: (card: CardType, order: number) => void,
 }
 
 export default function Card({ card, key, order, cancelDrop }: CardProps) {
   return (
     <div className="relative">
-      <img draggable={false} key={key} src={`/${card}.png`} className="h-36" />
+      <img draggable={false} key={key} src={card.img} alt={card.name} title={card.name} className="h-36" />
       <button
         type="button"
         onClick={() => cancelDrop(card, order)}
