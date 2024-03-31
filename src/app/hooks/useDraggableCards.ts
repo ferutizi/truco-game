@@ -27,6 +27,10 @@ export default function useDraggableCards() {
   const [lose, setLose] = useState(false)
 
   const shuffleDeck = () => {
+    setOrder1([])
+    setOrder2([])
+    setOrder3([])
+    setOrder4([])
     generateRandomCards()
     setWin(false)
     setLose(false)
