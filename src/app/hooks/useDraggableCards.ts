@@ -17,7 +17,6 @@ export default function useDraggableCards() {
     generateRandomCards()
   }, [])
 
-
   const [randomCards, setRandomCards] = useState<CardType[]>([])
   const [order1, setOrder1] = useState<CardType[]>([])
   const [order2, setOrder2] = useState<CardType[]>([])
@@ -26,6 +25,12 @@ export default function useDraggableCards() {
 
   const [win, setWin] = useState(false)
   const [lose, setLose] = useState(false)
+
+  const shuffleDeck = () => {
+    generateRandomCards()
+    setWin(false)
+    setLose(false)
+  }
 
   const generateRandomCards = () => {
     const randomSet: Set<CardType> = new Set()
@@ -133,7 +138,7 @@ export default function useDraggableCards() {
     order4,
     win,
     lose,
-    generateRandomCards,
+    shuffleDeck,
     handleOnDrag,
     handleOnDrop1,
     handleOnDrop2,

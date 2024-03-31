@@ -13,7 +13,7 @@ export default function Home() {
     order4,
     win,
     lose,
-    generateRandomCards,
+    shuffleDeck,
     handleOnDrag,
     handleOnDrop1,
     handleOnDrop2,
@@ -54,7 +54,7 @@ export default function Home() {
           }
         </div>
         <div className="flex gap-4">
-          <button onClick={() => generateRandomCards()}>Barajar</button>
+          <button onClick={() => shuffleDeck()}>Barajar</button>
           <button onClick={() => checkOrder()}>Comprobar</button>
         </div>
       </div>
