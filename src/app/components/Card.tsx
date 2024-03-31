@@ -4,15 +4,15 @@ import { CardType } from "../hooks/useDraggableCards"
 
 interface CardProps {
   card: CardType,
-  key: number,
+  index: number,
   order: number,
   cancelDrop: (card: CardType, order: number) => void,
 }
 
-export default function Card({ card, key, order, cancelDrop }: CardProps) {
+export default function Card({ card, index, order, cancelDrop }: CardProps) {
   return (
     <div className="relative">
-      <img draggable={false} key={key} src={card.img} alt={card.name} title={card.name} className="h-36" />
+      <img draggable={false} key={index} src={card.img} alt={card.name} title={card.name} className="h-36" />
       <button
         type="button"
         onClick={() => cancelDrop(card, order)}
