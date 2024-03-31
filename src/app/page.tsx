@@ -1,5 +1,6 @@
 'use client'
 
+import AsideValues from "./components/AsideValues";
 import Card from "./components/Card";
 import useDraggableCards from "./hooks/useDraggableCards";
 
@@ -37,6 +38,7 @@ export default function Home() {
           <p>Si sobran líneas deben quedar libres las de menor valor</p>
           <button>Barajar</button>
         </div> */}
+      <AsideValues />
       <div className="flex flex-col items-center">
         <div className="flex gap-16 select-none">
           {
