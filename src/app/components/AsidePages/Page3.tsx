@@ -1,6 +1,6 @@
 export default function Page3() {
   return (
-    <article className="flex flex-col gap-4 items-center">
+    <article className="flex flex-col gap-4 items-center my-8">
       <div className="flex gap-4">
         <img src="/12e.png" className="w-28" />
         <img src="/12b.png" className="w-28" />

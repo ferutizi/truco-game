@@ -1,6 +1,6 @@
 export default function Page1() {
   return (
-    <article className="flex flex-col gap-4">
+    <article className="flex flex-col gap-4 my-8">
       <div>
         <img src="/1e.png" className="w-28" />
       </div>
