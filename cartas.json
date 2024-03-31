@@ -3,7 +3,7 @@
     "id": "1c",
     "name": "1 de Copas",
     "img": "1c.png",
-    "value": 10
+    "value": 8
   },
   {
     "id": "2c",
@@ -15,7 +15,7 @@
     "id": "3c",
     "name": "3 de Copas",
     "img": "3c.png",
-    "value": 8
+    "value": 10
   },
   {
     "id": "4c",
@@ -75,7 +75,7 @@
     "id": "3e",
     "name": "3 de Espadas",
     "img": "3e.png",
-    "value": 8
+    "value": 10
   },
   {
     "id": "4e",
@@ -135,7 +135,7 @@
     "id": "3b",
     "name": "3 de Bastos",
     "img": "3b.png",
-    "value": 8
+    "value": 10
   },
   {
     "id": "4b",
@@ -183,7 +183,7 @@
     "id": "1o",
     "name": "1 de Oros",
     "img": "1o.png",
-    "value": 10
+    "value": 8
   },
   {
     "id": "2o",
@@ -195,7 +195,7 @@
     "id": "3o",
     "name": "3 de Oros",
     "img": "3o.png",
-    "value": 8
+    "value": 10
   },
   {
     "id": "4o",
