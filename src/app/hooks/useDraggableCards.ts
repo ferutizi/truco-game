@@ -24,6 +24,9 @@ export default function useDraggableCards() {
   const [order3, setOrder3] = useState<CardType[]>([])
   const [order4, setOrder4] = useState<CardType[]>([])
 
+  const [win, setWin] = useState(false)
+  const [lose, setLose] = useState(false)
+
   const generateRandomCards = () => {
     const randomSet: Set<CardType> = new Set()
     while (randomSet.size < 4) {
@@ -35,7 +38,6 @@ export default function useDraggableCards() {
   }
 
   const handleOnDrag = (e: DragEvent<HTMLImageElement>, carta: CardType) => {
-    console.log('dragStart')
     e.dataTransfer.setData("carta", carta.id)
   }
 
@@ -96,18 +98,49 @@ export default function useDraggableCards() {
     }
   }
 
+  const checkOrder = () => {
+    let winGame = true
+    let value1 = order1[0] ? order1[0].value : 0
+    let value2 = order2[0] ? order2[0].value : 0
+    let value3 = order3[0] ? order3[0].value : 0
+    let value4 = order4[0] ? order4[0].value : 0
+    order1.forEach(e => value1 !== e.value ? winGame = false : null)
+    order2.forEach(e => value2 !== e.value ? winGame = false : null)
+    order3.forEach(e => value3 !== e.value ? winGame = false : null)
+    order4.forEach(e => value4 !== e.value ? winGame = false : null)
+    if (value1 <= value2 || value2 <= value3 || value3 <= value4) winGame = false
+    if (randomCards[0]) winGame = false
+    finishGame(winGame)
+  }
+
+  const finishGame = (win: boolean) => {
+    if (win) {
+      console.log('win')
+      setWin(true)
+      setLose(false)
+    } else {
+      console.log('lose')
+      setLose(true)
+      setWin(false)
+    }
+  }
+
   return [
     randomCards,
     order1,
     order2,
     order3,
     order4,
+    win,
+    lose,
+    generateRandomCards,
     handleOnDrag,
     handleOnDrop1,
     handleOnDrop2,
     handleOnDrop3,
     handleOnDrop4,
     handleDragOver,
-    cancelDrop
+    cancelDrop,
+    checkOrder
   ] as const
 }
