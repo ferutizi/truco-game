@@ -26,11 +26,11 @@ export default function Home() {
   ] = useDraggableCards()
 
   const winStyle = "bg-green-900 border border-green-400"
-  const loseStyle = "bg-red-900 border border-red-600"
+  const loseStyle = "border border-red-600"
   const orderStyle = `flex justify-center items-center gap-4 bg-neutral-900 h-40 select-none rounded-lg ${win && winStyle} ${lose && loseStyle}`
 
   return (
-    <main className="flex h-screen flex-col justify-between items-center p-12" >
+    <main className="flex h-screen flex-col justify-between items-center p-12 bg-zinc-950" >
       {/*       <div>
           <h1>Truco Games</h1>
           <p>Ordena las cartas según su valor</p>
@@ -56,8 +56,8 @@ export default function Home() {
           }
         </div>
         <div className="flex gap-4">
-          <button onClick={() => shuffleDeck()}>Barajar</button>
-          <button onClick={() => checkOrder()}>Comprobar</button>
+          <button onClick={() => shuffleDeck()} className="border py-1 px-2 rounded-md my-4 hover:bg-green-900">Barajar</button>
+          <button onClick={() => checkOrder()} className="border py-1 px-2 rounded-md my-4 hover:bg-green-900">Comprobar</button>
         </div>
       </div>
       <section className="flex flex-col w-[60rem] justify-center gap-1">
