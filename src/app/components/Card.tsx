@@ -1,5 +1,6 @@
 'use client'
 
+import { text } from "stream/consumers"
 import { CardType } from "../hooks/useDraggableCards"
 
 interface CardProps {
