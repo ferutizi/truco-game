@@ -24,11 +24,11 @@ export default function AsideValues() {
     <>
       {openHelp
         ? <section className="flex flex-col items-center absolute z-10 top-0 left-0 w-[36rem] h-screen justify-between py-8 custom-gradient border-white border-r">
-          <button className="absolute top-0 right-0 m-6 border px-2 py-1 rounded-full my-4 hover:bg-green-950" onClick={() => setOpenHelp(false)}>X</button>
+          <button className="absolute top-0 right-0 m-6 border px-2 py-1 rounded-full my-4 hover:bg-green-950 transition-all ease-in duration-200" onClick={() => setOpenHelp(false)}>X</button>
           <div className="flex gap-4">
-            <button disabled={page === 1} className="disabled:opacity-50" onClick={() => prevPage()}>{"\<"}</button>
+            <button disabled={page === 1} className="disabled:opacity-50 transition-all ease-in duration-200" onClick={() => prevPage()}>{"\<"}</button>
             <p>{page}</p>
-            <button disabled={page === 4} className="disabled:opacity-50" onClick={() => nextPage()}>{"\>"}</button>
+            <button disabled={page === 4} className="disabled:opacity-50 transition-all ease-in duration-200" onClick={() => nextPage()}>{"\>"}</button>
           </div>
 
           {page === 1 && <Page1 />}
@@ -42,7 +42,7 @@ export default function AsideValues() {
             <button disabled={page === 4} onClick={() => nextPage()}>{"\>"}</button>
           </div>
         </section>
-        : <button className="absolute top-0 left-0 m-8 border py-1 px-2 rounded-md hover:bg-green-950" onClick={() => setOpenHelp(true)}>Ayuda</button>
+        : <button className="absolute top-0 left-0 m-8 border py-1 px-2 rounded-md hover:bg-green-950 transition-all ease-in duration-200" onClick={() => setOpenHelp(true)}>Ayuda</button>
       }
 
     </>

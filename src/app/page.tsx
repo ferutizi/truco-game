@@ -27,7 +27,7 @@ export default function Home() {
 
   const winStyle = "bg-green-900 border border-green-400"
   const loseStyle = "border border-red-600"
-  const orderStyle = `flex justify-center relative items-center gap-4 bg-green-950 border h-40 select-none rounded-md shadow-lg ${win && winStyle} ${lose && loseStyle}`
+  const orderStyle = `flex justify-center relative items-center gap-4 bg-green-950 border h-40 select-none rounded-md drop-shadow-custom ${win && winStyle} ${lose && loseStyle}`
   const tableStyle = "text-4xl opacity-50 absolute -left-14 -rotate-90 border-b w-40 text-center pb-[3px]"
 
   return (
@@ -44,16 +44,16 @@ export default function Home() {
                 title={card.name}
                 onDragStart={(e) => handleOnDrag(e, card)}
                 src={card.img}
-                className="cursor-pointer h-36 hover:opacity-70 drop-shadow-xl"
+                className="cursor-pointer h-36 hover:opacity-70 drop-shadow-custom transition-all ease-in duration-200"
               />
             )
           }
         </div>
         <div className="flex gap-4">
-          <button onClick={() => shuffleDeck()} className="border py-1 px-2 rounded-md my-4 hover:bg-green-950">
+          <button onClick={() => shuffleDeck()} className="border py-1 px-2 rounded-md my-4 hover:bg-green-950 transition-all ease-in duration-200">
             <img src="/cartas.png" alt="barajar" title="barajar" className="h-10" />
           </button>
-          <button onClick={() => checkOrder()} className="border py-1 px-2 rounded-md my-4 hover:bg-green-950">Comprobar</button>
+          <button onClick={() => checkOrder()} className="border py-1 px-2 rounded-md my-4 hover:bg-green-950 transition-all ease-in duration-200">Comprobar</button>
         </div>
       </div>
       <section className="flex flex-col w-[60rem] justify-center">
