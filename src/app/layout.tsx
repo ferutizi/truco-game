@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-zinc-950">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} custom-gradient`}>{children}</body>
     </html>
   );
 }
